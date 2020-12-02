@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #fff;
+  font-family: "Roboto", sans-serif;
 }
 
 /* GENERAL  */
@@ -25,15 +26,87 @@ main {
   border-radius: 25px;
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
-/* MAIN CONTENT  */
+/* MENU LATERALE */
 
 .sidemenu {
   width: 250px;
   height: 100%;
   background-color: black;
+  display: flex;
+  flex-direction: column;
 }
+
+.logo {
+  height: 90px;
+  line-height: 90px;
+  padding: 0 20px;
+}
+
+.logo img {
+  width: 70%;
+  vertical-align: middle;
+}
+
+.menuicone {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.menuicone img {
+  width: 10%;
+  color: #5c5c5c;
+}
+
+.menuicone span {
+  width: 90%;
+  font-size: 16px;
+  padding: 10px;
+  color: #5c5c5c;
+}
+
+.playlist {
+  flex-grow: 2;
+  max-height: 500px;
+  padding: 10px 20px;
+  overflow: auto;
+}
+
+.playlist i {
+  font-size: 30px;
+  vertical-align: middle;
+  margin: 10px 0;
+  color: #5c5c5c;
+}
+
+.playlist span {
+  color: #5c5c5c;
+  padding-left: 5px;
+}
+
+.playlist ul {
+  list-style: none;
+}
+
+.playlist li {
+  padding: 5px 0;
+}
+
+.playlist a {
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+.user {
+  padding: 10px 20px;
+}
+
+/* MAIN CONTENT  */
 
 .main-content {
   width: calc(100% - 250px);
