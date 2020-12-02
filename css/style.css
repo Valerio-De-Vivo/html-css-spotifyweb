@@ -37,12 +37,23 @@ main {
   background-color: black;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
+}
+
+.sidemenu a {
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+.sidemenu a:hover {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
 }
 
 .logo {
   height: 90px;
   line-height: 90px;
-  padding: 0 20px;
 }
 
 .logo img {
@@ -54,7 +65,6 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 20px;
   align-items: center;
 }
 
@@ -71,9 +81,9 @@ main {
 }
 
 .playlist {
-  flex-grow: 2;
+  flex-grow: 1;
   max-height: 500px;
-  padding: 10px 20px;
+  padding: 10px 0;
   overflow: auto;
 }
 
@@ -97,13 +107,28 @@ main {
   padding: 5px 0;
 }
 
-.playlist a {
-  text-decoration: none;
+.app {
   color: #5c5c5c;
+  border-bottom: 1px solid grey;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.app img {
+  width: 20px;
+  vertical-align: middle;
 }
 
 .user {
-  padding: 10px 20px;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.user img {
+  width: 20px;
+  background-color: gray;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 
 /* MAIN CONTENT  */
