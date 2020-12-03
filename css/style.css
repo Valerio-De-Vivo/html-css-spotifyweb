@@ -6,6 +6,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
 /* GENERAL  */
 
 .container {
@@ -26,7 +31,21 @@ main {
   border-radius: 25px;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
+  display: block;
+  color: white;
+}
+
+.btn:hover {
+  animation: bump 0.5s ease-in-out 1;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 /* MENU LATERALE */
@@ -40,11 +59,6 @@ main {
   padding: 0 20px;
 }
 
-.sidemenu a {
-  text-decoration: none;
-  color: #5c5c5c;
-}
-
 .sidemenu a:hover {
   text-decoration: none;
   color: white;
@@ -54,6 +68,10 @@ main {
 .logo {
   height: 90px;
   line-height: 90px;
+}
+
+.logo-mobile {
+  display: none;
 }
 
 .logo img {
@@ -80,18 +98,22 @@ main {
   color: #5c5c5c;
 }
 
-.playlist {
-  flex-grow: 1;
-  max-height: 500px;
-  padding: 10px 0;
-  overflow: auto;
-}
-
-.playlist i {
+.playlisttext i {
   font-size: 30px;
   vertical-align: middle;
   margin: 10px 0;
   color: #5c5c5c;
+}
+
+.playlisttext h4 {
+  padding-top: 10px;
+}
+
+.playlist {
+  flex-grow: 1;
+  max-height: 500px;
+  padding: 5px 0;
+  overflow: auto;
 }
 
 .playlist span {
@@ -146,6 +168,48 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  display: block;
+  border-bottom: 2px solid transparent;
+}
+
+.menuhover::after {
+  display: block;
+  content: "";
+  padding-top: 2px;
+  border-bottom: solid 2px greenyellow;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.active::after {
+  display: block;
+  content: "";
+  padding-top: 2px;
+  border-bottom: solid 2px greenyellow;
+  transform: scaleX(0.5);
+}
+
+.menuhover:hover::after {
+  transform: scaleX(0.5);
+}
+
+.main-content h3 {
+  padding: 20px;
+  font-size: 2rem;
 }
 
 /* BARRA FOOTER  */
@@ -157,4 +221,70 @@ footer {
   position: absolute;
   bottom: 0%;
   left: 0%;
+}
+
+/* MEDIA SCREEN */
+
+@media screen and (max-width: 578px) {
+  .sidemenu {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .logo-mobile img {
+    width: 80%;
+  }
+
+  .menuicone {
+    flex-grow: 2;
+    align-content: flex-start;
+    justify-content: center;
+  }
+
+  .menuicone img {
+    width: 80%;
+    color: #5c5c5c;
+    padding: 3px 0;
+  }
+
+  .menuicone span {
+    display: none;
+  }
+
+  .playlisttext {
+    display: none;
+  }
+
+  .playlist {
+    display: none;
+  }
+
+  .user a,
+  .app a {
+    display: none;
+  }
+
+  .user,
+  .app {
+    text-align: center;
+  }
+
+  .user img,
+  .app img {
+    width: 80%;
+  }
+
+  .main-content {
+    width: calc(100% - 50px);
+  }
 }
