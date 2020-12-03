@@ -11,6 +11,10 @@ a {
   color: #5c5c5c;
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 /* GENERAL  */
 
 .container {
@@ -212,8 +216,14 @@ nav ul li {
 }
 
 .main-content h3 {
-  padding: 20px;
-  font-size: 2rem;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+}
+
+.main-content p {
+  padding: 0 20px;
+  font-size: 80%;
+  color: #7a7d81;
 }
 
 .row-recently {
@@ -222,7 +232,7 @@ nav ul li {
 }
 
 .col-recently {
-  width: 200px;
+  width: 180px;
   margin: 10px 20px;
   text-align: center;
 }
