@@ -293,13 +293,14 @@ footer {
   bottom: 0%;
   left: 0%;
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .inascolto {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 250px;
+  width: 18%;
   padding: 0 20px;
 }
 
@@ -317,13 +318,15 @@ footer {
   opacity: 0.5;
 }
 
-.inascolto i {
+.inascolto i,
+.playmenu i {
   padding: 0 5px;
-  opacity: 80%;
+  opacity: 60%;
+  font-size: 90%;
 }
 
 .playbar {
-  flex-grow: 2;
+  width: 64%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,7 +346,8 @@ footer {
 }
 
 .playbutton i:hover,
-.inascolto i:hover {
+.inascolto i:hover,
+.playmenu i:hover {
   opacity: 100%;
   transform: scale(1.2);
 }
@@ -353,15 +357,8 @@ footer {
   opacity: 100%;
 }
 
-.playmenu {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 300px;
-  padding: 0 20px;
-}
-
 .scrollplaybar {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,7 +371,7 @@ footer {
 
 .scroll {
   margin: 0 20px;
-  width: 500px;
+  width: 50%;
   height: 4px;
   background-color: grey;
   position: relative;
@@ -405,6 +402,51 @@ footer {
 }
 
 .scrollover:hover {
+  background-color: greenyellow;
+  transform: scaleY(1.2);
+}
+
+.playmenu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 18%;
+  padding: 0 20px;
+}
+
+.scroll2 {
+  margin: 0 20px;
+  width: 40%;
+  height: 4px;
+  background-color: grey;
+  position: relative;
+  border-radius: 5px;
+}
+
+.scrollover2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+.scrollover2:hover::after {
+  width: 15px;
+  height: 15px;
+  background-color: lightgrey;
+  display: block;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scrollover2:hover {
   background-color: greenyellow;
   transform: scaleY(1.2);
 }
@@ -482,5 +524,37 @@ footer {
 
   .col-recently {
     width: 40%;
+  }
+
+  .inascolto {
+    font-size: 70%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .inascolto .track {
+    padding: 0;
+  }
+
+  .inascolto img {
+    height: 50%;
+  }
+
+  .playmenu {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .playmenu i {
+    padding: 3px 0;
+    font-size: 60%;
+  }
+
+  .playbutton {
+    font-size: 60%;
+  }
+  .playmenu {
+    padding: 0;
   }
 }
