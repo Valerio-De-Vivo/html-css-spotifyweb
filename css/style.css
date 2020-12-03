@@ -15,6 +15,14 @@ a {
   border-radius: 50%;
 }
 
+.opacity {
+  opacity: 50%;
+}
+
+.opacity:hover {
+  opacity: 100%;
+}
+
 /* GENERAL  */
 
 .container {
@@ -66,7 +74,6 @@ main {
 .sidemenu a:hover {
   text-decoration: none;
   color: white;
-  font-weight: bolder;
 }
 
 .logo {
@@ -106,7 +113,6 @@ main {
   font-size: 30px;
   vertical-align: middle;
   margin: 10px 0;
-  color: #5c5c5c;
 }
 
 .playlisttext h4 {
@@ -286,6 +292,63 @@ footer {
   position: absolute;
   bottom: 0%;
   left: 0%;
+  display: flex;
+}
+
+.inascolto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+  padding: 0 20px;
+}
+
+.inascolto img {
+  height: 50%;
+}
+
+.inascolto .track {
+  padding: 0 10px;
+  flex-grow: 2;
+}
+
+.inascolto .track p {
+  font-size: 80%;
+  opacity: 0.5;
+}
+
+.inascolto i {
+  padding: 0 5px;
+  opacity: 80%;
+}
+
+.playbar {
+  flex-grow: 2;
+}
+
+.playbutton {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.playbutton i {
+  margin: 0 10px;
+  opacity: 80%;
+}
+
+.playbutton i:nth-child(3) {
+  font-size: 35px;
+}
+
+.playmenu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  padding: 0 20px;
 }
 
 /* MEDIA SCREEN */
@@ -357,5 +420,9 @@ footer {
 
   .main-content {
     width: calc(100% - 50px);
+  }
+
+  .col-recently {
+    width: 40%;
   }
 }
