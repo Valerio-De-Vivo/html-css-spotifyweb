@@ -324,10 +324,13 @@ footer {
 
 .playbar {
   flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .playbutton {
-  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,12 +338,19 @@ footer {
 }
 
 .playbutton i {
-  margin: 0 10px;
+  margin: 5px 10px;
   opacity: 80%;
 }
 
+.playbutton i:hover,
+.inascolto i:hover {
+  opacity: 100%;
+  transform: scale(1.2);
+}
+
 .playbutton i:nth-child(3) {
-  font-size: 35px;
+  font-size: 30px;
+  opacity: 100%;
 }
 
 .playmenu {
@@ -349,6 +359,54 @@ footer {
   align-items: center;
   width: 300px;
   padding: 0 20px;
+}
+
+.scrollplaybar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollplaybar p {
+  font-size: 80%;
+  opacity: 80%;
+}
+
+.scroll {
+  margin: 0 20px;
+  width: 500px;
+  height: 4px;
+  background-color: grey;
+  position: relative;
+  border-radius: 5px;
+}
+
+.scrollover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+.scrollover:hover::after {
+  width: 15px;
+  height: 15px;
+  background-color: lightgrey;
+  display: block;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scrollover:hover {
+  background-color: greenyellow;
+  transform: scaleY(1.2);
 }
 
 /* MEDIA SCREEN */
